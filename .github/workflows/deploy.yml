@@ -32,7 +32,7 @@ jobs:
 
       - name: Build
         working-directory: app
-        run: ./node_modules/.bin/tsc -b && ./node_modules/.bin/vite build
+        run: npm run build
 
       - uses: actions/configure-pages@v4
 
