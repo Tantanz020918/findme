@@ -181,33 +181,31 @@ export default function SchoolWeb() {
               <div className="flex justify-between"><span>每层公共设施</span><span className="text-black">公共水房（位于x02与x03之间）</span></div>
             </div>
           </div>
-          <h3 className="text-[15px] font-semibold text-black mb-3">9号楼 3楼 东面布局</h3>
+          <h3 className="text-[15px] font-semibold text-black mb-3">楼层布局（以1层为例）</h3>
           <div className="w-full bg-white rounded-xl border border-gray-200 p-4">
             <div className="text-xs text-gray-600">
-              <div className="font-bold text-sm mb-3 text-center">9号楼3楼东面（从南到北）</div>
               <div className="flex gap-1">
                 <div className="flex-1 border-2 border-gray-400 rounded p-2 text-center bg-white">
-                  <div className="font-bold">301</div>
+                  <div className="font-bold">101</div>
                   <div className="text-[10px] text-gray-400">四人间</div>
                 </div>
                 <div className="flex-1 border-2 border-gray-400 rounded p-2 text-center bg-white">
-                  <div className="font-bold">302</div>
+                  <div className="font-bold">102</div>
                   <div className="text-[10px] text-gray-400">四人间</div>
                 </div>
                 <div className="flex-1 border-2 border-gray-300 rounded p-2 text-center bg-gray-100">
                   <div className="font-bold text-gray-400">水房</div>
-                  <div className="text-[10px] text-gray-400">磨砂窗</div>
                 </div>
                 <div className="flex-1 border-2 border-gray-400 rounded p-2 text-center bg-white">
-                  <div className="font-bold">303</div>
+                  <div className="font-bold">103</div>
                   <div className="text-[10px] text-gray-400">四人间</div>
                 </div>
                 <div className="flex-1 border-2 border-gray-400 rounded p-2 text-center bg-white">
-                  <div className="font-bold">304</div>
+                  <div className="font-bold">104</div>
                   <div className="text-[10px] text-gray-400">四人间</div>
                 </div>
               </div>
-              <div className="text-center mt-2 text-gray-400">← 南 ————— 东面外墙（窗户朝外）————— 北 →</div>
+              <div className="text-center mt-2 text-gray-400">————— 外墙（窗户朝外）————— </div>
             </div>
           </div>
         </div>

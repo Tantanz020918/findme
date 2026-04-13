@@ -30,7 +30,7 @@ export default function PhoneFrame({ children }: Props) {
         </div>
       </div>
 
-      {/* Small screen: no frame, full screen */}
+      {/* Small screen: no frame, full screen, no status bar */}
       <div className="
         flex min-[501px]:hidden
         flex-col
@@ -38,12 +38,8 @@ export default function PhoneFrame({ children }: Props) {
         bg-white
         relative
       ">
-        <StatusBar />
         <div className="flex-1 flex flex-col overflow-hidden">
           {children}
-        </div>
-        <div className="flex justify-center pb-1 bg-white safe-area-bottom">
-          <div className="w-32 h-1 bg-gray-300 rounded-full" />
         </div>
       </div>
     </div>

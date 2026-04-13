@@ -156,6 +156,23 @@ export default function WeChat() {
     const isGroup = chat?.isGroup || false
     const chatAvatar = isAdmin ? '🔧' : chat?.avatar || '👤'
 
+    // Parse time string like "9月2日 12:30" or "8月30日 09:00" into comparable minutes
+    const parseTime = (time?: string): number => {
+      if (!time) return -1
+      const match = time.match(/(\d+)月(\d+)日\s*(\d+):(\d+)/)
+      if (!match) return -1
+      const [, month, day, hour, minute] = match.map(Number)
+      return month * 44640 + day * 1440 + hour * 60 + minute
+    }
+
+    const shouldShowTime = (idx: number): boolean => {
+      if (idx === 0) return true
+      const curr = parseTime(messages[idx].time)
+      const prev = parseTime(messages[idx - 1].time)
+      if (curr === -1 || prev === -1) return !!messages[idx].time
+      return curr - prev >= 10 // 10 minutes gap
+    }
+
     const ChatMessages = () => {
       const scrollRef = useRef<HTMLDivElement>(null)
       useEffect(() => {
@@ -166,32 +183,38 @@ export default function WeChat() {
       return (
         <div ref={scrollRef} className="flex-1 overflow-y-auto px-3 py-3 bg-[#ededed] flex flex-col">
           <div className="space-y-3">
-            {messages.map((msg) => {
+            {messages.map((msg, idx) => {
               const isMine = msg.sender === 'me'
               const avatar = isMine ? '👩' : (msg.senderAvatar || chatAvatar)
               const name = msg.senderName || (isMine ? '林晓' : chatName)
+              const showTime = shouldShowTime(idx)
 
               return (
-                <div key={msg.id} className={`flex gap-2 ${isMine ? 'flex-row-reverse' : 'flex-row'}`}>
-                  {/* Avatar */}
-                  <div className="w-9 h-9 bg-gray-200 rounded-lg flex items-center justify-center text-base shrink-0">
-                    {avatar}
-                  </div>
-                  {/* Bubble */}
-                  <div className={`max-w-[70%] ${isMine ? 'items-end' : 'items-start'} flex flex-col`}>
-                    {isGroup && (
-                      <span className={`text-[11px] text-gray-400 mb-0.5 ${isMine ? 'text-right' : 'text-left'}`}>
-                        {name}
-                      </span>
-                    )}
-                    <div
-                      className={`px-3 py-2 rounded-lg text-[15px] leading-relaxed whitespace-pre-line ${
-                        isMine
-                          ? 'bg-[#95ec69] text-gray-900'
-                          : 'bg-white text-gray-900'
-                      }`}
-                    >
-                      {msg.content}
+                <div key={msg.id}>
+                  {showTime && msg.time && (
+                    <div className="text-center text-[11px] text-gray-400 py-1 mb-2">{msg.time}</div>
+                  )}
+                  <div className={`flex gap-2 ${isMine ? 'flex-row-reverse' : 'flex-row'}`}>
+                    {/* Avatar */}
+                    <div className="w-9 h-9 bg-gray-200 rounded-lg flex items-center justify-center text-base shrink-0">
+                      {avatar}
+                    </div>
+                    {/* Bubble */}
+                    <div className={`max-w-[70%] ${isMine ? 'items-end' : 'items-start'} flex flex-col`}>
+                      {isGroup && (
+                        <span className={`text-[11px] text-gray-400 mb-0.5 ${isMine ? 'text-right' : 'text-left'}`}>
+                          {name}
+                        </span>
+                      )}
+                      <div
+                        className={`px-3 py-2 rounded-lg text-[15px] leading-relaxed whitespace-pre-line ${
+                          isMine
+                            ? 'bg-[#95ec69] text-gray-900'
+                            : 'bg-white text-gray-900'
+                        }`}
+                      >
+                        {msg.content}
+                      </div>
                     </div>
                   </div>
                 </div>

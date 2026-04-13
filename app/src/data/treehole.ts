@@ -185,4 +185,4 @@ export const securityQuestions: SecurityQuestion[] = [
   },
 ]
 
-export const CORRECT_PASSWORD = 'linxiao0816'
+export const CORRECT_PASSWORD = 'luntanLinxiao0816'
