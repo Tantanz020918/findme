@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(mkdir -p .claude/skills)",
+      "Bash(git clone:*)",
+      "Bash(cp -r /tmp/openspec-skills/openspec-proposal /Users/bytedance/Documents/mygame/.claude/skills/)",
+      "Bash(cp -r /tmp/openspec-skills/openspec-apply /Users/bytedance/Documents/mygame/.claude/skills/)",
+      "Bash(cp -r /tmp/openspec-skills/openspec-archive /Users/bytedance/Documents/mygame/.claude/skills/)",
+      "Bash(cp -r /tmp/openspec-skills/templates /Users/bytedance/Documents/mygame/.claude/skills/)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(mv 历史头像.png building.png)",
+      "Bash(mv 威胁.png dorm-photo.png)",
+      "Bash(mv 学习.png study-photo.png)",
+      "Bash(mv 校园平面图.png campus-map.png)",
+      "Bash(mv 生日.png cake.png)",
+      "Bash(npx identify:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight src/assets/sprite.png)",
+      "Bash(npx sharp-cli:*)",
+      "Bash(node -e ':*)"
+    ]
+  }
+}
