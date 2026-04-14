@@ -78,21 +78,7 @@ export default function SchoolWeb() {
             <img src={campusMapUrl} alt="校园地图" className="w-full h-full object-contain rounded-lg"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = 'none'
-                ;(e.target as HTMLImageElement).parentElement!.innerHTML = `
-                  <div class="text-xs text-gray-500 p-4 text-left leading-relaxed">
-                    <div class="font-bold text-sm mb-2 text-center">校园地图</div>
-                    <div class="mb-1">宿舍区分布（共12栋）：</div>
-                    <div>东面4栋：7号楼、8号楼、9号楼、10号楼</div>
-                    <div>北面4栋：1号楼、2号楼、3号楼、4号楼</div>
-                    <div>西面4栋：5号楼、6号楼、11号楼、12号楼</div>
-                    <div class="mt-2 mb-1">银杏树分布：</div>
-                    <div>东面：9号楼旁、10号楼旁</div>
-                    <div>北面：1号楼旁、3号楼旁</div>
-                    <div>西面：5号楼旁、11号楼旁</div>
-                    <div class="mt-2">9号楼东面紧邻校园外墙</div>
-                    <div class="mt-2 text-gray-400">其他：教学楼、图书馆、食堂、体育馆...</div>
-                  </div>
-                `
+                ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-6">图片加载失败，请稍后重试</div>'
               }}
             />
           </div>

@@ -177,7 +177,7 @@ export default function TreeHole() {
                 <img src={studyPhotoUrl} alt="学习照片" className="w-full h-full object-cover"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = 'none'
-                    ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-6">📷 学习照片（素材待替换）<br/><br/>桌面上摊开公务员考试资料<br/>手腕戴着圆形小表盘浅色表带手表</div>'
+                    ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-6">图片加载失败，请稍后重试</div>'
                   }}
                 />
               </div>
@@ -233,7 +233,7 @@ export default function TreeHole() {
                 <img src={buildingUrl} alt="建筑" className="w-full h-full object-cover"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = 'none'
-                    ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-6">🏢 一栋现代建筑（素材待替换）</div>'
+                    ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-6">图片加载失败，请稍后重试</div>'
                   }}
                 />
               </div>
@@ -271,7 +271,7 @@ export default function TreeHole() {
                   <img src={dormPhotoUrl} alt="宿舍楼" className="w-full h-full object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = 'none'
-                      ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-6">📷 宿舍楼照片（素材待替换）<br/><br/>从东侧校外拍摄的6层宿舍楼<br/>银杏树、路灯、围墙可见<br/>3楼第2扇窗户有人影</div>'
+                      ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-6">图片加载失败，请稍后重试</div>'
                     }}
                   />
                 </div>
@@ -360,7 +360,7 @@ export default function TreeHole() {
                       <img src={buildingUrl} alt="头像" className="w-full h-full object-cover"
                         onError={(e) => {
                           (e.target as HTMLImageElement).style.display = 'none'
-                          ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<span class="text-2xl">🏢</span>'
+                          ;(e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-gray-400 text-[13px] text-center p-4">图片加载失败，请稍后重试</div>'
                         }}
                       />
                     </div>

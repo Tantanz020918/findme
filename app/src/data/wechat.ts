@@ -26,6 +26,23 @@ export interface Chat {
 
 export const chats: Chat[] = [
   {
+    id: 'classmate',
+    name: '王佳琪',
+    avatar: '🧑',
+    lastMessage: '',
+    messages: [
+      { id: 'c0', sender: 'other', content: '你看树洞了吗！！有个神秘爆料贴', time: '9月6日 08:30' },
+      { id: 'c0b', sender: 'other', content: '说有人的私密照片 也不知道受害者是谁', time: '9月6日 08:31' },
+      { id: 'c0c', sender: 'other', content: '好可怕 你快去看看', time: '9月6日 08:31' },
+      { id: 'c1', sender: 'me', content: '啊？我去看看', time: '9月6日 08:35' },
+      { id: 'c2', sender: 'other', content: '选课选了吗 顺便问一下', time: '9月6日 09:00' },
+      { id: 'c3', sender: 'me', content: '选了 你呢', time: '9月6日 09:30' },
+      { id: 'c4', sender: 'other', content: '我还没 有什么推荐的选修吗', time: '9月6日 09:31' },
+      { id: 'c5', sender: 'me', content: '心理学导论还不错', time: '9月6日 09:35' },
+      { id: 'c6', sender: 'other', content: '好的好的', time: '9月6日 09:36' },
+    ],
+  },
+  {
     id: 'mom',
     name: '妈妈',
     avatar: '👩',
@@ -99,19 +116,6 @@ export const chats: Chat[] = [
       { id: 'g5', sender: 'other', senderName: '王婷', senderAvatar: '👩', content: '收到', time: '9月1日 16:07' },
       { id: 'g6', sender: 'other', senderName: '陈浩', senderAvatar: '👦', content: '请问教材在哪里领？', time: '9月2日 10:30' },
       { id: 'g7', sender: 'other', senderName: '辅导员张老师', senderAvatar: '👨‍🏫', content: '教材发放点在图书馆一楼大厅', time: '9月2日 10:45' },
-    ],
-  },
-  {
-    id: 'classmate',
-    name: '王佳琪',
-    avatar: '🧑',
-    lastMessage: '好的好的',
-    messages: [
-      { id: 'c1', sender: 'other', content: '选课选了吗', time: '9月4日 09:00' },
-      { id: 'c2', sender: 'me', content: '选了 你呢', time: '9月4日 09:30' },
-      { id: 'c3', sender: 'other', content: '我还没 有什么推荐的选修吗', time: '9月4日 09:31' },
-      { id: 'c4', sender: 'me', content: '心理学导论还不错', time: '9月4日 09:35' },
-      { id: 'c5', sender: 'other', content: '好的好的', time: '9月4日 09:36' },
     ],
   },
   {

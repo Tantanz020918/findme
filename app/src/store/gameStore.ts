@@ -48,6 +48,7 @@ export const useGameStore = create<GameState>((set) => ({
     localStorage.removeItem('treehole_logged_in')
     localStorage.removeItem('admin_chat_unlocked')
     localStorage.removeItem('post_restored')
+    localStorage.removeItem('intro_seen')
     window.location.reload()
   },
 }))
